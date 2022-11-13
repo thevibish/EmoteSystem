@@ -146,7 +146,7 @@ local Commands = {
     ["help"] = function()
         Message:Send("Check console (F9) for Emote Names! (or Syn Console)", "Info")
         warn([[
-            Animation Changer finay#1197
+            Animation Changer
 
             Usage:
 
