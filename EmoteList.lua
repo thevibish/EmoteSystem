@@ -43,7 +43,20 @@ table.sort(emotesTable, function(a, b)
     return a[1] < b[1]
 end)
 
-
+local ReturnedWrong;
+function FixString(text)
+    local Converted = string.split(text, "-")[1]
+    if Converted then
+        text = string.split(text, "-")[1]
+    end
+    Converted = string.sub(text,string.len(text))
+    if Converted == " " then
+        text = text:sub(1, #text - 1)
+        ReturnedWrong = FixString(text)
+    else
+        return text
+    end
+end
 
 local RobloxEmotes = {}
 local EmoteChoices = {}
