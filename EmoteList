@@ -46,9 +46,6 @@ end)
 local ReturnedWrong;
 function FixString(text)
     local Converted = string.split(text, "-")[1]
-    if Converted then
-        text = string.split(text, "-")[1]
-    end
     Converted = string.sub(text,string.len(text))
     if Converted == " " then
         text = text:sub(1, #text - 1)
